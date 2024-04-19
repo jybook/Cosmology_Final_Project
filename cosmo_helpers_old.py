@@ -112,15 +112,29 @@ def check_priors(theta):
     #     return False
     # return True
 
-    #Expanded priors in response to initial fits
+    # #Expanded priors in response to initial fits
 
-    if not(0.0220 < omega_b <0.0226): #all values below 0.222 were rejected in the initial run
+    # if not(0.0220 < omega_b <0.0226): #all values below 0.222 were rejected in the initial run
+    #     return False
+    # if not(0.118 < omega_cdm <0.130):
+    #     return False
+    # if not(0.664 < h <0.704):
+    #     return False
+    # if not (2*np.pi < amp < 3*np.pi):
+    #     return False
+    # if not ((omega_b + omega_cdm)/(h**2) <= 1):
+    #     return False
+    # return True
+
+    #Expanded priors in response to first expanded fits
+
+    if not(0.0220 < omega_b <0.03): #all values below 0.222 were rejected in the initial run
         return False
-    if not(0.118 < omega_cdm <0.130):
+    if not(0.118 < omega_cdm <0.20):
         return False
     if not(0.664 < h <0.704):
         return False
-    if not (2*np.pi < amp < 3*np.pi):
+    if not (7 < amp < 8):
         return False
     if not ((omega_b + omega_cdm)/(h**2) <= 1):
         return False
